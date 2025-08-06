@@ -1,15 +1,3 @@
-# import requests
-# from app.config.settings import OPENWEATHER_API_KEY
-
-# def get_weather(city: str):
-#     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPENWEATHER_API_KEY}&units=metric"
-#     response = requests.get(url)
-#     if response.status_code == 200:
-#         data = response.json()
-#         return f"The weather in {city} is {data['weather'][0]['description']} with temperature {data['main']['temp']}°C."
-#     else:
-#         return "Couldn't fetch weather data."
-#  app/services/weather.py
 import requests
 import os
 from typing import Optional

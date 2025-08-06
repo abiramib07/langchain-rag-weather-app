@@ -1,0 +1,18 @@
+langchain
+langgraph
+mistralai
+openai
+qdrant-client
+pypdf
+requests
+streamlit
+python-dotenv
+langsmith
+langchain-community
+langchain-mistralai mistralai
+sentence-transformers
+--upgrade --quiet langchain-huggingface sentence_transformers
+pip install -U langchain-qdrant
+pytest
+streamlit
+pytest pytest-mock

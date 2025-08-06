@@ -3,7 +3,6 @@ import os
 from app.routes.graph import build_graph
 from app.utils.pdf_loader import load_pdf
 from app.embeddings.embedder import embed_documents
-from app.services.weather import get_weather
 from langchain_core._api.deprecation import LangChainDeprecationWarning
 import warnings
 
@@ -33,11 +32,8 @@ query = st.text_input("Ask a question:", placeholder="e.g. What's the summary of
 
 if query:
     with st.spinner("Thinking..."):
-
-        if "weather" in query.lower():
-            response = get_weather(query)
-        else:
-            response = run_query(query)
-
+        # ✅ Use LangGraph routing instead of manual decision
+        response = run_query(query)
+        
         st.markdown("### 💬 Response:")
         st.write(response)
